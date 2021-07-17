@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar as ExpoStatusbar } from 'expo-status-bar';
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 
-export default function App() {
+export default function App() {  
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <>    
+      <SafeAreaView style={styles.container}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'purple'}}>
+     <Text style={{color: 'white'}}>Lets move for big dough</Text>
+        
     </View>
+        <View style={{flex: 1}}>
+          <Text>Cant say same here</Text>
+        </View>
+        <ExpoStatusbar style="auto"/>
+    </SafeAreaView>
+    </>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flexDirection: 'column',
+    marginTop: StatusBar.currentHeight
+  }
 });
