@@ -8,6 +8,8 @@ import {
   ListView,
   RefreshControl,
 } from "react-native";
+import { Card } from "react-native-paper"
+
 
 export const RestaurantsInfo = ({restaurant = {}) => {
 
@@ -21,6 +23,9 @@ export const RestaurantsInfo = ({restaurant = {}) => {
       isClosedTemporarily
     } = restaurant
   return (
-    <Text> Info</Text>
+    
+    <Card>
+  <Card.Cover source={photos[0]} />
+    </Card>
   )
 }
