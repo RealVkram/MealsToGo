@@ -9,8 +9,18 @@ import {
   RefreshControl,
 } from "react-native";
 
-export const RestaurantsInfo = () => (
-  <View>
-    <Text>RestaurantsInfo</Text>
-  </View>
-);
+export const RestaurantsInfo = ({restaurant = {}) => {
+
+  const {
+      name = 'Nkwobi',
+      icon,
+      photos = ["https://www.foodiesfeed.com/free-food-photo/nicely-served-burgers/"],
+      address = "100 Umuonyia",
+      isOpenNow = true,
+      rating = 4,
+      isClosedTemporarily
+    } = restaurant
+  return (
+    <Text> Info</Text>
+  )
+}
