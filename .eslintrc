@@ -1,3 +1,7 @@
 {
-    "extends": "@react-native-community"
+    "extends": "@react-native-community",
+    "rules" : {
+    //use single quotes for strings
+        "quotes": [2, "double", { "avoidEscape": true }]    
+    }
 }

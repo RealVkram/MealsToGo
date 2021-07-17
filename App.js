@@ -1,30 +1,39 @@
-import { StatusBar as ExpoStatusbar } from 'expo-status-bar';
-import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
+import React from "react";
+import { StatusBar as ExpoStatusbar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import { Searchbar } from "react-native-paper";
 
-export default function App() {  
-
+export default function App() {
   return (
-    <>    
+    <>
       <SafeAreaView style={styles.container}>
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'purple'}}>
-     <Text style={{color: 'white'}}>Lets move for big dough</Text>
-        
-    </View>
-        <View style={{flex: 1}}>
-          <Text>Cant say same here</Text>
+        <View style={styles.search}>
+          <Searchbar placeholder="Search" />
         </View>
-        <ExpoStatusbar style="auto"/>
-    </SafeAreaView>
+        <View style={styles.list}>
+          <Text>List</Text>
+        </View>
+      </SafeAreaView>
+      <ExpoStatusbar style="auto" />
     </>
-    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    marginTop: StatusBar.currentHeight
-  }
+    marginTop: StatusBar.currentHeight,
+  },
+  search: {
+    flex: 1,
+    backgroundColor: "#F5FCFF",
+    padding: 20,
+  },
+  list: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "blue",
+    padding: 20,
+  },
 });
