@@ -6,10 +6,12 @@ import {
   TouchableOpacity,
   Image,
   ListView,
-  RefreshControl,
+  RefreshControl, Platform
 } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
+
+const isWeb = Platform.OS === "web";
 
 export const RestaurantsInfo = ({ restaurant = {} }) => {
   const {
@@ -35,7 +37,7 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
 const Title = styled.Text`
   font-size: 1.2em;
   font-weight: bold;
-  color: #fff;
+  color: ${isWeb ? "#fff" : (props) => props.theme.colors.ui.primary};
   padding: 0.5em;
   align-self: center;
   justify: center;
