@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, SafeAreaView, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 
+
 import { RestaurantsInfo } from "../Components/RestaurantsInfo.Components";
 
 export const RestaurantScreen = () => (
@@ -16,6 +17,7 @@ export const RestaurantScreen = () => (
     </SafeAreaView>
   </>
 );
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -26,7 +26,7 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
 
   return (
     <RestCard elevation={5}>
-      <Cover key={name} source={{ uri: photos[1] }} />
+      <Cover key={Math.random().toFixed(2)} source={{ uri: photos[1] }} />
       <Title>{name.toUpperCase()}</Title>
     </RestCard>
   );
