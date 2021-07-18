@@ -8,7 +8,7 @@ export const RestaurantScreen = () => (
   <>
     <SafeAreaView style={styles.container}>
       <View style={styles.search}>
-        <Searchbar placeholder="Search" />
+        <Searchbar placeholder="Search restaurants here" />
       </View>
       <View style={styles.list}>
         <RestaurantsInfo />
