@@ -24,12 +24,13 @@ const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight,
   },
   search: {
-    flex: 1,
+    flex: 0.5 ,
     backgroundColor: "#F5FCFF",
     padding: 20,
+    borderColor: "#F5FCFF",  
   },
   list: {
-    flex: 1,
+    flex: 0.5,
     backgroundColor: "blue",
     padding: 20,
   },
