@@ -11,7 +11,7 @@ import {
 import { Card } from "react-native-paper"
 
 
-export const RestaurantsInfo = ({restaurant = {}) => {
+export const RestaurantsInfo = ({ restaurant = {} }) => {
 
   const {
       name = 'Nkwobi',
@@ -25,7 +25,7 @@ export const RestaurantsInfo = ({restaurant = {}) => {
   return (
     
     <Card>
-  <Card.Cover source={photos[0]} />
+       <Card.Cover source={photos[0]} />
     </Card>
   )
 }
