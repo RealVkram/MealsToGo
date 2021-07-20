@@ -24,16 +24,7 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
       <Cover key={Math.random().toFixed(2)} source={{ uri: photos[1] }} />
       <InfoCard>
         <Title>{name}</Title>
-        <Rating>
-          <StarRating
-            size={10}
-            count={Math.floor(rating)}
-            unit="half"
-            roundedCorner={true}
-          />
-          <TextEnd>Hi</TextEnd>
-        </Rating>
-        
+        <StarRating />
         <Address>{address}</Address>
       </InfoCard>
     </RestCard>
@@ -74,13 +65,3 @@ const RestCard = styled(Card)`
   margin-left: ${(props) => props.theme.space[2]};
 `;
 
-const Rating = styled.View`
-  flex-direction: row;
-  justify-content: flex-start;
-`;
-
-const TextEnd = styled.Text`
-  flex-direction: row;
-  justify-content: flex-end;
-  text-align: left;
-  `
