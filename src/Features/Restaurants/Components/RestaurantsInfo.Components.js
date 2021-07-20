@@ -6,16 +6,18 @@ import {
   TouchableOpacity,
   Image,
   ListView,
-  RefreshControl, Platform
+  RefreshControl,
+  Platform,
 } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 
-const isWeb = Platform.OS === "web";
+
 
 export const RestaurantsInfo = ({ restaurant = {} }) => {
+  
   const {
-    name = "Nkwobi",
+    name = "nkwobi",
     icon,
     photos = [
       "https://picsum.photos/700",
@@ -28,25 +30,36 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
 
   return (
     <RestCard elevation={5}>
+      <HeaderTitle>This is the type of food we eat</HeaderTitle>
       <Cover key={Math.random().toFixed(2)} source={{ uri: photos[1] }} />
-      <Title>{name.toUpperCase()}</Title>
+      <Title>{name}</Title>
     </RestCard>
   );
 };
 
 const Title = styled.Text`
-  font-size: 1.2em;
-  font-weight: bold;
-  color: ${isWeb ? "#fff" : (props) => props.theme.colors.ui.primary};
-  padding: 0.5em;
-  align-self: center;
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.sizes[5]};
+  font-weight: {(props) => props.theme.fontWeights.bold};
+  color: ${(props) => props.theme.colors.text.inverse};
+  padding: ${(props) => props.theme.space[1]};
   justify: center;
 `;
-const Cover = styled(Card.Cover)`
-  background-color: green;
-  padding: 0.5em;
+const HeaderTitle = styled.Text`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.sizes[1]};
+  font-weight: {(props) => props.theme.fontWeights.light};
+  color: ${(props) => props.theme.colors.text.inverse};
+  padding: ${(props) => props.theme.space[1]};
+  justify: left;
 `;
+const Cover = styled(Card.Cover)`
+  background-color: ${(props) => props.theme.colors.ui.primary};
+  padding: 0.2em;
+`;	
 
 const RestCard = styled(Card)`
   background-color: purple;
+  padding: 0.1em;
+  margin-left: ${(props) => props.theme.space[2]};
 `;
