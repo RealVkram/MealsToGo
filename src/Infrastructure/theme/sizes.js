@@ -1,1 +1,1 @@
-export const sizes = ["8px", "16px", "32px", "64px", "128px", "1.2em"];
+export const sizes = ["8px", "16px", "32px", "64px", "128px", "1.2em", "1em"];

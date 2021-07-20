@@ -22,8 +22,8 @@ export const RestaurantScreen = () => (
 
 const RestaurantList = styled.View`
     flex: 0.5;
-   background-color: ${(props) => props.theme.colors.bg.secondary}};,
-    padding: ${(props) => props.theme.sizes[5]};
+    background-color: ${(props) => props.theme.colors.bg.secondary}};
+    padding: 0.2emp;
     margin: ${(props) => props.theme.space[3]};
 `;
 
